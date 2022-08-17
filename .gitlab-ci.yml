@@ -1,0 +1,12 @@
+image: jekyll/jekyll
+
+stages:
+- deploy
+
+pages:
+  stage: deploy
+  script:
+    - JEKYLL_ENV=production jekyll b -d public
+  artifacts:
+    paths:
+      - public

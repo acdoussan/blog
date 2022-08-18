@@ -26,7 +26,7 @@ title: Adam's Blog                          # the main title
 tagline: Whatever I feel like writing about, it goes here :)   # it will display as the sub-title
 
 description: >-                        # used by seo meta and the atom feed
-  My blog, primarily focused on homelab and tech.
+  My blog, primarily focused on homelabbing and tech.
 
 # fill in the protocol & hostname for your site, e.g., 'https://username.github.io'
 url: 'https://blog.doussan.info'
@@ -45,10 +45,10 @@ social:
   links:
     # The first element serves as the copyright owner's link
     - https://github.com/acdoussan       # change to your github homepage
-    - https://gitlab.com/acdoussan
+    # - https://gitlab.com/acdoussan
     # Uncomment below to add more social links
     # - https://www.facebook.com/username
-    - https://www.linkedin.com/in/username
+    # - https://www.linkedin.com/in/username
 
 google_site_verification:               # fill in to your verification string
 

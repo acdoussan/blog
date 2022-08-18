@@ -6,9 +6,11 @@
 -
   type: gitlab
   icon: 'fab fa-gitlab'
+  url: 'https://gitlab.com/acdoussan'
 -
   type: linkedin
   icon: 'fab fa-linkedin'
+  url: 'https://www.linkedin.com/in/acdoussan/'
 -
   type: email
   icon: 'fas fa-envelope'

@@ -21,7 +21,7 @@ timezone: America/Chicago
 # jekyll-seo-tag settings › https://github.com/jekyll/jekyll-seo-tag/blob/master/docs/usage.md
 # ↓ --------------------------
 
-title: Adams Blog                          # the main title
+title: Adam's Blog                          # the main title
 
 tagline: Whatever I feel like writing about, it goes here :)   # it will display as the sub-title
 

@@ -68,7 +68,7 @@ utilization also dropped from about 5% to 1.25% with the same configuration. I a
 results, and while a LXC container is not the same as a full VM, this improvement in utilization is completely worth
 it for my uses. The only thing left now is to add more services to use these new extra resources.
 
-Its worth noting that proxmox recommends that docker be run in side of a full VM. From the
+It is worth noting that proxmox recommends that docker be run in side of a full VM. From the
 [official documentation](https://pve.proxmox.com/wiki/Linux_Container):
 
 > If you want to run application containers, for example, Docker images, it is recommended that you run them inside a

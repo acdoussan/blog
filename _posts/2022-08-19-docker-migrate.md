@@ -67,3 +67,14 @@ containers consumes 5.5 - 6 GB of RAM. While these docker containers are not rea
 utilization also dropped from about 5% to 1.25% with the same configuration. I am completely floored with these
 results, and while a LXC container is not the same as a full VM, this improvement in utilization is completely worth
 it for my uses. The only thing left now is to add more services to use these new extra resources.
+
+Its worth noting that proxmox recommends that docker be run in side of a full VM. From the
+[official documentation](https://pve.proxmox.com/wiki/Linux_Container):
+
+> If you want to run application containers, for example, Docker images, it is recommended that you run them inside a
+> Proxmox Qemu VM. This will give you all the advantages of application containerization, while also providing the
+> benefits that VMs offer, such as strong isolation from the host and the ability to live-migrate, which otherwise
+> isn’t possible with containers.
+
+I have had no issues so far, but If you are looking to run docker in an LXC container, know the tradeoffs before
+commiting.

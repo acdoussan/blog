@@ -42,9 +42,10 @@ recommend setting a local temp directory in `/etc/vzdump.conf` for each node. Wh
 have a lot of local storage, and there is the potential for them to run out of space when taking backups. Additionally,
 I would rather not have the write cycles on the boot drives if possible.
 
-There was [another post](https://forum.proxmox.com/threads/lxc-unprivileged-backup-task-failing.48565/post-465750)
+There was
+[another post](https://forum.proxmox.com/threads/create-backup-fail-with-error-cannot-open-permission-de.32386/)
 that recommended verifying that the folders are actually writeable, and adjusting the permissions by running
-`chmod 777` if they are not. There were no issues with the permissions set on my folders, so this is not my
+`chmod 755` if they are not. There were no issues with the permissions set on my folders, so this is not my
 issue, but it may be worth checking.
 
 # The Solution

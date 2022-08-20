@@ -2,7 +2,7 @@
 title: 'How to fix "Cannot open: Permission denied" when trying to backup an unprivileged LXC container over NFS in Proxmox'
 date: 2022-08-20 15:55:00 -500
 categories: [homelab, proxmox]
-tags: [homelab,proxmox,lxc,container,containers]
+tags: [homelab,proxmox,lxc,container,containers,debug]
 image:
   path: /assets/img/2022-08-20-container-backup-permission-denied-nfs/proxmox-error.png
   width: 1590

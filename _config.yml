@@ -83,7 +83,7 @@ theme_mode: dark   # [light|dark]
 img_cdn:
 
 # the avatar on sidebar, support local or CORS resources
-avatar: https://adam.doussan.info/static/media/me_2x_even.bc15e01e.png
+avatar: /assets/img/me_2x_even.png
 
 # boolean type, the global switch for ToC in posts.
 toc: true

@@ -3,6 +3,7 @@ title: How to migrate a docker container to a different host, the easy way
 date: 2022-08-19 10:00:00 -500
 categories: [homelab, docker]
 tags: [docker,homelab,portainer]
+layout: mypost
 ---
 
 *tl;dr check out [docker migrate](https://github.com/acdoussan/docker-migrate)*

@@ -10,13 +10,13 @@ image:
   alt: A Raspberry Pi model 4
 ---
 
-# Introduction
+## Introduction
 
 Welcome to my homelab hardware series! In this series, I will document the hardware for my homelab, as well as the
 decisions I made and the lessons that I have learned. The first few episodes will be written looking back into the
 past at my progression, but once we are all caught up, there will be a new post whenever I get some new hardware.
 
-# Definition: What is a homelab?
+## Definition: What is a homelab?
 
 Scrolling through the posts on [r/homelab](https://www.reddit.com/r/homelab/) might seem intimidating. Pictures of 42u
 server racks filled to the brim with servers are not uncommon. "I can't do that" you might think.
@@ -69,7 +69,7 @@ something. So, whatever your goals are, get out there (or just open your laptop 
 
 Anyway, enough about the theory, let's talk about how I got started.
 
-# Humble Beginnings
+## Humble Beginnings
 
 When I was just starting out, my needs were simple. I had just moved into a new house, and I was looking to do
 some home automation with [Home Assistant](https://www.home-assistant.io/) on the cheap. Back then, the phrase
@@ -102,7 +102,7 @@ local devices would be complicated. You would also either have to set up some so
 instance to the internet, but both are really out of the scope of this post. If you are looking for extra reading here,
 The [Home Assistant forums](https://community.home-assistant.io/) are pretty active and a good source of information.
 
-# Love it, or list it?
+## Love it, or list it?
 
 Looking back with what I know now, would I still start with a Raspberry Pi? In short, no. Even with their original ~$50
 price point and ignoring that they are being scalped / almost impossible to get currently, after all of the extras you
@@ -129,11 +129,11 @@ of the tiny/mini/micro options, I don't really view this as viable.
 [This article](https://www.tomshardware.com/how-to/boot-raspberry-pi-4-usb) from Tom's Hardware might help if you
 really want to go that route.
 
-# See ya later!
+## See ya later!
 
 In episode 2 I will talk about my adventure into getting a NAS, including the NAS platforms that I considered. Until
 then, are ya leaving? Alright, see ya later!
 
-# Footnotes
+## Footnotes
 [^wikipedia-server]:[https://en.wikipedia.org/wiki/Server_(computing)](https://en.wikipedia.org/wiki/Server_(computing))
 [^homelab-def]:[https://www.youtube.com/watch?v=gPGf4Y8nQqM&ab_channel=TechnoTim](https://www.youtube.com/watch?v=gPGf4Y8nQqM&ab_channel=TechnoTim)

@@ -10,7 +10,7 @@ image:
   alt: Screenshot of the error when trying to take a backup
 ---
 
-# The Problem
+## The Problem
 
 When trying to take a full stop backup of my LXC containers in Proxmox, I get the following error output:
 
@@ -35,7 +35,7 @@ INFO: Backup job finished with errors
 TASK ERROR: job errors
 ```
 
-# Research
+## Research
 
 [Some posts](https://forum.proxmox.com/threads/lxc-unprivileged-backup-task-failing.48565/post-227443)
 recommend setting a local temp directory in `/etc/vzdump.conf` for each node. While this would work, my nodes do not
@@ -48,7 +48,7 @@ that recommended verifying that the folders are actually writeable, and adjustin
 `chmod 755` if they are not. There were no issues with the permissions set on my folders, so this is not my
 issue, but it may be worth checking.
 
-# The Solution
+## The Solution
 
 [This post](https://forum.proxmox.com/threads/tmp-cannot-open-permission-denied.87730/post-441028) mentions mapping
 all users to root as part of the NFS configuration. Because LXC containers use

@@ -8,7 +8,7 @@ layout: mypost
 
 *tl;dr check out [docker migrate](https://github.com/acdoussan/docker-migrate)*
 
-# The Problem
+## The Problem
 
 As my homelab continues to grow, I continue to learn and find out new things about the software that I use.
 Recently, I discovered LXC containers in proxmox. I deciced to try them out and created a new container running
@@ -22,7 +22,7 @@ created the new LXC container, installed docker, installed Portainer, and loaded
 I met my first surprise: Portainer only exports its own data, it doesn't recreate any continers on the new host.
 This makes sense when you think about it, but meant that I had to find a way to migrate my containers another way.
 
-# The Existing Solutions
+## The Existing Solutions
 
 One option is [docker-volumes.sh](https://github.com/ricardobranco777/docker-volumes.sh). This project lets you
 export the volumes for your container as a tar file, and then import that data back in a new container. While
@@ -36,7 +36,7 @@ for the container, including networks, volumes, exported ports, etc.
 
 I'm sure you can see where this is going...
 
-# The New Solution
+## The New Solution
 
 After a couple of pull requests to add support for volumes and default networks to docker autocompose ([#41](https://github.com/Red5d/docker-autocompose/pull/41),
 [#42](https://github.com/Red5d/docker-autocompose/pull/42)), I created a new script.
@@ -61,7 +61,7 @@ this, otherwise you will have to enter your password several times. Also, make s
 this yourself. While it worked for my containers, there are too many different docker configurations for me to test
 them all. Use this at your own peril.
 
-# The Results
+## The Results
 
 My new LXC container with all of my migrated docker containers uses about 1.25 GB of RAM, where the VM with the same
 containers consumes 5.5 - 6 GB of RAM. While these docker containers are not really resource intensive, CPU

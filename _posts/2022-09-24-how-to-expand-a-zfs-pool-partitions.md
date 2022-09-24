@@ -21,10 +21,10 @@ So, the general plan was:
 1. Install the new drives, reinstall proxmox, and restore the VMs from backups
 2. Migrate all of the VMs that already had virtual drives to the new local storage
 3. Create a local storage drive for truenas and add it to the existing boot mirror
-4. Delete the NFS share, and remove the SSDs from the truenas boot pool and reuse them for something else
+4. Delete the NFS share, remove the SSDs from the truenas boot pool, and reuse them for something else
 
-While doing step 1, the SD cards were temorarily included in the mirror I was creating. This meant that the size of the
-pool was limited to about 10gb per drive, when 100gb was available. When this happened, I had basically two options:
+While doing step 1, the SD cards were temporarily included in the mirror I was creating. This meant that the size of the
+pool was limited to about 10Gb per drive when 100Gb was available. When this happened, I had two options:
 
 1. Reinstall proxmox and set the size correctly
 2. Fix it
@@ -61,7 +61,7 @@ config:
             ata-3E128-TS2-550B01_FL006YEB-part3  ONLINE       0     0     0
 ```
 
-These are apparently the "by id" identifiers for these drives. To find the `/dev/sd[a,b,c,...]` that these identifiers
+These are the "by id" identifiers for these drives. To find the `/dev/sd[a,b,c,...]` that these identifiers
 correlate to, you can run the following:
 
 ```bash
@@ -78,8 +78,8 @@ lrwxrwxrwx 1 root root 10 Sep 24 14:07 ata-3E128-TS2-550B01_5L004JX7-part3 -> ..
 
 Bonus note: According to
 [this post](https://forums.FreeBSD.org/threads/zpool-confusion-where-is-my-partition.63555/post-367802),
-if you add the following lines to `/boot/loader.conf` and reboot your machine `zpool status` will apparently show the
-`sd[x]` names instead. I have not tried this, do so at your own risk.
+if you add the following lines to `/boot/loader.conf` and reboot your machine `zpool status` will show the `sd[x]`
+names instead. I have not tried this, do so at your own risk.
 
 ```
 kern.geom.label.disk_ident.enable="0"           # Disable the auto-generated Disk IDs  for disks
@@ -87,7 +87,7 @@ kern.geom.label.gptid.enable="0"        # Disable the auto-generated GPT UUIDs f
 kern.geom.label.ufsid.enable="0"        # Disable the auto-generated UFS UUIDs for filesystems
 ```
 
-Once you have the proper drive names, one by one open them up using parted, and do the following:
+Once you have the proper drive names, one by one open them up using `parted` and do the following:
 
 ```
 root@r720:~# parted /dev/sdq

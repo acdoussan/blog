@@ -21,7 +21,7 @@ So, the general plan was:
 1. Install the new drives, reinstall proxmox, and restore the VMs from backups
 2. Migrate all of the VMs that already had virtual drives to the new local storage
 3. Create a local storage drive for truenas and add it to the existing boot mirror
-4. Delete the NFS share, and remove the SSDs from the truenas boot pool and reuse them for something else
+4. Delete the NFS share, remove the SSDs from the truenas boot pool, and reuse them for something else
 
 This article focuses on step 3.
 

@@ -65,7 +65,7 @@ _The ZFS Pool Layout_
 
 That's it! There is no real special sauce here, just using the system to get what we want. It is also worth noting that
 this is technically more redundant than a RAID 01. If one drive were to die on both adapters with a RAID 01, all data
-would be lost, but with this setup, we could lose multiple dives on both adapters, as long as they are not part of the
+would be lost. With this setup, we could lose multiple dives on both adapters, as long as they are not part of the
 same vdev.
 
 ## Mermaid code for diagram

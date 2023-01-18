@@ -35,6 +35,8 @@ $ bundle
 
 Please see the [theme's docs](https://github.com/cotes2020/jekyll-theme-chirpy#documentation).
 
+To run the dev server, run `~/.rbenv/versions/2.7.6/bin/bundle exec jekyll s`
+
 ## License
 
 This work is published under [MIT][mit] License.

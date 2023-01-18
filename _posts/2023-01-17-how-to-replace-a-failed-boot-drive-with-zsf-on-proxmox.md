@@ -128,6 +128,7 @@ root@hp1:~# proxmox-boot-tool status
 Re-executing '/usr/sbin/proxmox-boot-tool' in new private mount namespace..
 System currently booted with uefi
 WARN: /dev/disk/by-uuid/CE07-1118 does not exist - clean '/etc/kernel/proxmox-boot-uuids'! - skipping
+6D31-87F4 is configured with: uefi (versions: 5.13.19-6-pve, 5.15.39-3-pve, 5.15.83-1-pve)
 CE07-78FC is configured with: uefi (versions: 5.13.19-6-pve, 5.15.39-3-pve, 5.15.83-1-pve)
 
 ```

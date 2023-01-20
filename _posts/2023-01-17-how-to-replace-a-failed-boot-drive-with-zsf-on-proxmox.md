@@ -19,7 +19,7 @@ best.
 
 ## Steps to replace the drive
 
-First we will start off with `zpool status`. You should see something like the following:
+First, we will start with `zpool status`. You should see something like the following:
 
 ```
 root@hp1:~# zpool status
@@ -40,12 +40,12 @@ config:
 	    ata-PNY_CS900_240GB_SSD_PNY22092203030100C65-part3  ONLINE       0     0     0
 ```
 
-It would be a good idea to try and get the drive alive again before proceeding (reseat the drive, inspect area for
-dust, etc) but we're going to assume the drive is good and dead and continue. First step is to physically replace the
-drive with a suitable (ideally identical) replacement. The drive must at least be the same size or bigger.
+It would be a good idea to try and get the drive alive again before proceeding (reseat the drive, inspect the area for
+dust, etc) but we're going to assume the drive is good and dead and continue. The first step is to physically replace
+the drive with a suitable (ideally identical) replacement. The drive must at least be the same size or bigger.
 
-Once the drive has been replaced physically, we can move onto the next step. We need to copy the partitions from the
-good drive to the new one so that the machine is able to boot from it.
+Once the drive has been replaced physically, we can move on to the next step. We need to copy the partitions from the
+good drive to the new one so that the machine can boot from it.
 
 ### Copy the partitions to the new drive from the good drive
 
@@ -56,7 +56,7 @@ good drive to the new one so that the machine is able to boot from it.
 1. First, run `lsblk` and look for the new drive (likely has the same name as the previous drive, in our case,
 `nvme0n1`).
 
-2. Copy the partitions from the good drive to the new drive using `sgdisk --replicate=/dev/TARGET /dev/SOURCE`. BE CAREFUL HERE, if you get the command backwards, you will lose all of your data on the good drive. In our case, I ran `sgdisk --replicate=/dev/nvme0n1 /dev/sda`
+2. Copy the partitions from the good drive to the new drive using `sgdisk --replicate=/dev/TARGET /dev/SOURCE`. BE CAREFUL HERE, if you get the command backward, you will lose all of your data on the good drive. In our case, I ran `sgdisk --replicate=/dev/nvme0n1 /dev/sda`
 
 3. We need to randomize the GUIDs to make sure weird things don't happen with zfs. We can do this with `sgdisk --randomize-guids <NEW DRIVE>`. In our case, I ran `sgdisk --randomize-guids /dev/nvme0n1`.
 
